@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num1;
+    cout<<"Enter a number: ";
+    cin>>num1;
+    cout<<"\n value before being incremented: "<<num1<<endl;
+    num1++;
+    cout<<"\n value after being incremented: "<<num1<<endl;
+    num1--;
+    cout<<"\n value before being decremented: "<<num1<<endl;
+    num1--;
+    cout<<"\n value after being incremented: "<<num1<<endl;
+
+
+}
