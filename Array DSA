@@ -1,0 +1,122 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+int searchElem(int arr[], int n, int key){
+	
+	for(int i = 0; i < n; i++){
+		if(i == key){
+			return arr[i];
+		}
+	}
+	return - 1;	
+}
+
+int searchInd(int arr[], int n, int val){
+	for(int i = 0; i < n; i++){
+		if(arr[i]==val){
+			return i;
+		}
+	}
+	return -1;
+}
+
+
+
+int main(){
+	
+	int list[20] = {6,1,2,4,3};
+	
+	int n = 5, key = 2, val = 4, output;
+	
+	output = searchElem(list, n, key);
+	
+	cout<<"Elements: "<<output<<endl;
+	
+	output = searchInd(list, n, val);
+	cout<<"Index is: "<<output<<endl;
+	
+	
+/*	int arr[15] = {1,2,3,4,5};
+	
+	
+	
+	Updating
+	int index = 3, x = 10;
+	
+	for (int i = 0; i<15; i++){
+		if(i == index){
+			arr[i] = x;
+		}
+	    cout<<arr[i]<<" ";
+	}*/
+	
+	
+	/*Displaying
+	for(int i = 0; i < 15; i++){
+		cout<<arr[i-1]<<endl;
+	}
+	*/
+	/*
+	Searching
+	int search = 3;
+	
+	for(int i = 0; i < 15; i++){
+		if(i == search){
+			cout<<arr[i]<<endl;
+		}
+	}*/ 
+	
+	/*insert
+	  
+	  
+    int n = 5; // Number of elements in the array
+
+    cout << "Original Array: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int element_to_add = 5;
+    
+    //Insertion proccess
+    for (int i = n; i > 0; i--) {
+        arr[i] = arr[i - 1];
+    }
+
+    arr[0] = element_to_add;
+
+    cout << "Updated Array: ";
+    for (int i = 0; i <= n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;*/
+    
+    /*delete
+    int pos = 2, x = 10, n = 5;
+    for(int i = 0; i < n; i++){
+    	cout<<arr[i]<<" ";
+	}
+	//Deletion Proccess
+	cout<<"\n";
+	for(int i = pos; i < n-1;i++){
+		arr[i]=arr[i+1];
+	}
+	n--;
+	for(int i = 0; i < n; i++){
+		cout<<arr[i]<<" ";
+	}*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+} 
