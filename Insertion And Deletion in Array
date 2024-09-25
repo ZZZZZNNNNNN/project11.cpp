@@ -1,0 +1,80 @@
+#include <iostream>
+
+using namespace std;
+
+int inserting(int arr[], int key, int pos, int n){
+	cout<<"Insertion\n\n";
+	
+	
+	
+	cout<<"Original Array: ";
+	
+	for(int i = 0; i < n; i++){
+		cout<<arr[i]<<" ";
+	}
+	cout<<"\n";
+	
+	
+	
+    cout<<"Insertion: ";
+    for(int i = n-1; i >= pos; i--){
+    	//shift to the right
+    	arr[i+1] = arr[i];
+	}
+	arr[pos] = key;
+	n++;
+	cout<<endl;
+	return n;
+
+ 
+}
+
+int deletion(int arr[], int pos, int n){
+	cout<<"\n";
+	cout<<"Deletion\n\n";
+	
+	cout<<"Original Array: ";
+	 for(int i = 0; i < n; i++){
+    	cout<<arr[i]<<" ";
+	}
+	//Deletion Proccess
+	cout<<"\n";
+	cout<<"After Deletion: ";
+	for(int i = pos; i < n;i++){
+		//shift to the left
+		arr[i]=arr[i+1];
+	}
+	n--;
+
+	
+}
+
+
+
+
+
+int main(){
+	
+	//Inserting
+	int arrayList[10] = {1,2,3,4,5};
+	
+	int n = 5, pos = 3, key = 20;
+	
+	n = inserting(arrayList, 20, 3, 5);
+	
+	
+	for(int i =0; i < n; i++){
+	cout<<arrayList[i]<<" ";
+	}
+	cout<<endl;
+	
+	deletion(arrayList, 3, 5 );
+	
+	n = deletion(arrayList, 2, n);
+	
+	for(int i = 0; i < n; i++){
+		cout<<arrayList[i]<<" ";
+	}	
+
+	
+}
