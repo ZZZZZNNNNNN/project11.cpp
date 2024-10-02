@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+	
+	//Array
+    int sparseMatrix[5][6] =
+    {
+        {0 ,0 ,1 ,1 ,0 ,0 },
+        {1 , 2 , 0 , 0 , 9,0 },
+        {7 , 3 , 0 , 9 , 0,0 },
+        {0 , 0 , 0 , 0 , 0,0 },
+        {0 , 8 , 0 , 9 , 7 , 0}
+    };
+    
+    //size of column
+    int size = 0;
+    
+    //nested and conditions
+    for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 6; j++)
+            if (sparseMatrix[i][j] != 0)
+                size++;
+                
+    //Compact matrix
+    int compactMatrix[5][size];
+    
+    //For traversing
+    int k = 0;
+    //Nested Loops and condition
+    for (int i = 0; i < 5; i++)
+        for (int j = 0; j < 6; j++)
+            if (sparseMatrix[i][j] != 0)
+            {
+                compactMatrix[0][k] = i;
+                compactMatrix[1][k] = j;
+                
+                compactMatrix[2][k] = sparseMatrix[i][j];
+                k++;
+            } 
+            
+    //print out
+    for (int i=0; i<3; i++)
+    {
+        for (int j=0; j<size; j++)
+            cout <<" "<< compactMatrix[i][j];
+
+        cout <<"\n";
+    }
+    return 0;
+}
