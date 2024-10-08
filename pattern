@@ -1,8 +1,10 @@
 public class Main{
+    //Cordero, Andre Cj V.
     public static void main(String[] args){
         
     int n = 10;    
     int i, j;
+    int size = 1;
         for(i = 1; i <= n; i++) {
             for(j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -12,19 +14,18 @@ public class Main{
         
 
         for (i = n; i >=0; i--) {
-            for (j = 0; j <= i; j++) {
+            for (j = 1; j <= i; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-    
         int num = 2 * n - 2;
         for (i = n; i > 0; i--) {
             for (j = 0; j < n - i; j++) {
                 System.out.print(" ");
             }
-            num = num - 1;
-            for (j = 1; j < i; j++) {
+            num = num - 2;
+            for (j = 0; j < i; j++) {
                 System.out.print("*");
             }
             System.out.println();
@@ -43,4 +44,3 @@ public class Main{
     
     }
 }
-
