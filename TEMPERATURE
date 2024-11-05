@@ -1,0 +1,20 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        
+        Scanner obj = new Scanner(System.in);
+        
+        System.out.print("Enter a temperature value: (in C) ");
+        
+        
+        
+        int tempConv = obj.nextInt();
+        
+        tempConv = (tempConv * 9 / 5) + 32;
+        System.out.print("The temperature value in F is: "+ tempConv);
+        
+    }
+}
