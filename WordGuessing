@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        String c;
+        Scanner input = new Scanner(System.in);
+        
+        char hw[] = {'e','n','c','y','c','l','o','p','e','d','i','a'};
+        
+        Bool win = true;
+        for(int i = 0; i < 11; i++){
+            System.out.println(hw[i]);
+        }
+        
+        while(!true){
+            System.out.print("Hidden word is made up of 11 letters. (3 lives remaining)");
+            c = input.next();
+            
+        }
+    }
+}
